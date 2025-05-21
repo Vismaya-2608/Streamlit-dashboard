@@ -112,9 +112,9 @@ try:
                 st.success(f"Generating plots for target column: **{target_column}**")
                 plot_target_distribution_by_object_columns_streamlit(dfs, target_column, df_names)
 
-        except KeyError as ke:
+except KeyError as ke:
             st.error(f"Missing column for IQR filtering: {ke}")
-        except Exception as e:
+except Exception as e:
             st.error(f"❌ Error during IQR filtering or plotting: {e}")
 else:
     st.info("👈 Upload a CSV or Excel file to begin analysis.")
