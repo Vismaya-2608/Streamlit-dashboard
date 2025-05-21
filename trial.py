@@ -30,7 +30,7 @@ def plot_target_distribution_by_object_columns_streamlit(dfs, target_column, df_
 ]
 
 # Plot overall boxplots
-for i, df_ in enumerate(dfs):
+    for i, df_ in enumerate(dfs):
     df_name = df_names[i]
     st.header(f"📊 Target Distribution Analysis for: {df_name}")
 
@@ -43,7 +43,7 @@ for i, df_ in enumerate(dfs):
     st.plotly_chart(fig, use_container_width=True)
 
 # Box and line plots by object columns
-for col in object_cols:
+    for col in object_cols:
     st.subheader(f"📌 Box & Line Plots by: {col}")
     cols = st.columns(len(dfs))
 
