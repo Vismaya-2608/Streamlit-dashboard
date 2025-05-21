@@ -193,7 +193,7 @@ if uploaded_file:
 
             fig = px.scatter_map(
                 grouped, lat="Lat", lon="Lon", size="Record Count", color="Avg Meter Price",
-                hover_name="Area", size_max=50, zoom=10, mapbox_style="open-street-map",
+                hover_name="Area", size_max=50, zoom=10, map_style="open-street-map",
                 color_continuous_scale="Viridis"
             )
             st.plotly_chart(fig, use_container_width=True)
