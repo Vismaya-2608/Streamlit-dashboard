@@ -191,7 +191,7 @@ if uploaded_file:
             price_filter = st.sidebar.slider("Avg. Meter Price Range", float(min_p), float(max_p), (float(min_p), float(max_p)))
             grouped = grouped[(grouped["Avg Meter Price"] >= price_filter[0]) & (grouped["Avg Meter Price"] <= price_filter[1])]
 
-            fig = px.scatter_mapbox(
+            fig = px.scatter_map(
                 grouped, lat="Lat", lon="Lon", size="Record Count", color="Avg Meter Price",
                 hover_name="Area", size_max=50, zoom=10, mapbox_style="open-street-map",
                 color_continuous_scale="Viridis"
