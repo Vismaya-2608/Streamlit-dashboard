@@ -80,7 +80,7 @@ for col in object_cols:
                 fig_line.update_yaxes(showgrid=True, gridwidth=1, gridcolor='lightgray')
                 st.plotly_chart(fig_line, use_container_width=True)
     st.markdown("---")
-  if uploaded_file:
+if uploaded_file:
     if uploaded_file.name.endswith(".csv"):
         df = pd.read_csv(uploaded_file)
     else:
