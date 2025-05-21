@@ -22,7 +22,7 @@ def get_iqr_bounds(df, col):
     iqr = q3 - q1
     return q1 - 1.5 * iqr, q3 + 1.5 * iqr
   
-def plot_target_distribution_by_object_columns_streamlit(dfs, target_column, df_names)
+def plot_target_distribution_by_object_columns_streamlit(dfs, target_column, df_names):
     object_cols = [
     'trans_group_en', 'procedure_name_en', 'property_type_en', 'property_sub_type_en',
     'property_usage_en', 'reg_type_en', 'nearest_landmark_en', 'nearest_metro_en',
