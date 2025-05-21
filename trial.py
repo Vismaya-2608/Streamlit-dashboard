@@ -92,7 +92,7 @@ if uploaded_file:
     st.subheader("🧾 Dataset Preview")
     st.dataframe(df.head(10), use_container_width=True)
 
- try:
+try:
             # Check if required columns exist for IQR filtering
             for col in ['meter_sale_price', 'procedure_area']:
                 if col not in df.columns:
